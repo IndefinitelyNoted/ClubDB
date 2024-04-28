@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>ClubLogonServlet</servlet-name>
+        <servlet-class>servlets.ClubLogonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MemberUpdateServlet</servlet-name>
+        <servlet-class>servlets.MemberUpdateServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowPurchasesServlet</servlet-name>
+        <servlet-class>servlets.ShowPurchasesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClubLogonServlet</servlet-name>
+        <url-pattern>/ClubLogon</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>Logon.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet-mapping>
+        <servlet-name>MemberUpdateServlet</servlet-name>
+        <url-pattern>/MemberUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowPurchasesServlet</servlet-name>
+        <url-pattern>/ShowPurchases</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
